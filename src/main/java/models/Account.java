@@ -8,19 +8,18 @@ public class Account {
     private String user_name;
     private String password;
     private Boolean active;
-    private ArrayList<User> users;
+    private User user;
     private ArrayList<Order> orders;
 
     public Account() {
     }
 
-    public Account(int account_id, Role role, String username, String password, Boolean active, ArrayList<User> users, ArrayList<Order> orders) {
-        this.account_id = account_id;
+    public Account(Role role, String username, String password, Boolean active, User user, ArrayList<Order> orders) {
         this.role = role;
         this.user_name = username;
         this.password = password;
         this.active = active;
-        this.users = users;
+        this.user = user;
         this.orders = orders;
     }
 
@@ -64,12 +63,12 @@ public class Account {
         this.active = active;
     }
 
-    public ArrayList<User> getUsers() {
-        return users;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsers(ArrayList<User> users) {
-        this.users = users;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public ArrayList<Order> getOrders() {
